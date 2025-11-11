@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Crud\\Crud\\",
+  "WorkspaceRootPath": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|e:\\crud\\crud\\services\\commands\\delete\\deletecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|solutionrelative:services\\commands\\delete\\deletecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|e:\\crud\\crud\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|d:\\zair\\programacion\\miscodigos\\crud\\crud\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|solutionrelative:controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|e:\\crud\\crud\\services\\commands\\upsert\\upsertcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|d:\\zair\\programacion\\miscodigos\\crud\\crud\\services\\commands\\upsert\\upsertcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|solutionrelative:services\\commands\\upsert\\upsertcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|e:\\crud\\crud\\services\\commands\\getall\\getallcommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|d:\\zair\\programacion\\miscodigos\\crud\\crud\\services\\commands\\getall\\getallcommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|solutionrelative:services\\commands\\getall\\getallcommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|d:\\zair\\programacion\\miscodigos\\crud\\crud\\services\\commands\\delete\\deletecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|solutionrelative:services\\commands\\delete\\deletecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,20 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ClientesController.cs",
-              "DocumentMoniker": "E:\\Crud\\Crud\\Controllers\\ClientesController.cs",
+              "DocumentMoniker": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Controllers\\ClientesController.cs",
               "RelativeDocumentMoniker": "Controllers\\ClientesController.cs",
-              "ToolTip": "E:\\Crud\\Crud\\Controllers\\ClientesController.cs",
+              "ToolTip": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Controllers\\ClientesController.cs",
               "RelativeToolTip": "Controllers\\ClientesController.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAA8wEIAAAAMAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAiwC4AAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T23:10:49.251Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -47,38 +48,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "UpsertCommandHandler.cs",
-              "DocumentMoniker": "E:\\Crud\\Crud\\Services\\Commands\\Upsert\\UpsertCommandHandler.cs",
+              "DocumentMoniker": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Services\\Commands\\Upsert\\UpsertCommandHandler.cs",
               "RelativeDocumentMoniker": "Services\\Commands\\Upsert\\UpsertCommandHandler.cs",
-              "ToolTip": "E:\\Crud\\Crud\\Services\\Commands\\Upsert\\UpsertCommandHandler.cs",
+              "ToolTip": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Services\\Commands\\Upsert\\UpsertCommandHandler.cs",
               "RelativeToolTip": "Services\\Commands\\Upsert\\UpsertCommandHandler.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAswBIAAAAsAAAA",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAswFAAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T10:38:48.038Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DeleteCommandHandler.cs",
-              "DocumentMoniker": "E:\\Crud\\Crud\\Services\\Commands\\Delete\\DeleteCommandHandler.cs",
-              "RelativeDocumentMoniker": "Services\\Commands\\Delete\\DeleteCommandHandler.cs",
-              "ToolTip": "E:\\Crud\\Crud\\Services\\Commands\\Delete\\DeleteCommandHandler.cs",
-              "RelativeToolTip": "Services\\Commands\\Delete\\DeleteCommandHandler.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAkwBoAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T13:32:13.109Z",
+              "WhenOpened": "2024-05-30T10:38:48.038Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "DeleteCommandHandler.cs",
+              "DocumentMoniker": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Services\\Commands\\Delete\\DeleteCommandHandler.cs",
+              "RelativeDocumentMoniker": "Services\\Commands\\Delete\\DeleteCommandHandler.cs",
+              "ToolTip": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Services\\Commands\\Delete\\DeleteCommandHandler.cs",
+              "RelativeToolTip": "Services\\Commands\\Delete\\DeleteCommandHandler.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T13:32:13.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "GetAllCommandResponse.cs",
-              "DocumentMoniker": "E:\\Crud\\Crud\\Services\\Commands\\GetAll\\GetAllCommandResponse.cs",
+              "DocumentMoniker": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Services\\Commands\\GetAll\\GetAllCommandResponse.cs",
               "RelativeDocumentMoniker": "Services\\Commands\\GetAll\\GetAllCommandResponse.cs",
-              "ToolTip": "E:\\Crud\\Crud\\Services\\Commands\\GetAll\\GetAllCommandResponse.cs",
+              "ToolTip": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Services\\Commands\\GetAll\\GetAllCommandResponse.cs",
               "RelativeToolTip": "Services\\Commands\\GetAll\\GetAllCommandResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA4AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-01T12:39:31.838Z"
             }

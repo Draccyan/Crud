@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rvCBhqO+85yDR3eAk1MJWLBR5oYU4TXSFp1nKimKRf19jRaJ1LpkkE0yfs7oQUsx7tyg/65d1xmw38dFwdwxsw==",
+  "dgSpecHash": "7fNr2Oj+E8q0Mc13BPG29+qFSK0AE9sd21zgneZKKHrWe6XDoRAjjPypmq+zwrT8qpj5cc6rLgZ6kO0tObAArQ==",
   "success": true,
-  "projectFilePath": "E:\\Crud\\Datos\\Datos.csproj",
+  "projectFilePath": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Datos\\Datos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\GamerGroup\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\GamerGroup\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

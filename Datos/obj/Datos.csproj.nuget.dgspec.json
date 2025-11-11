@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Crud\\Datos\\Datos.csproj": {}
+    "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Datos\\Datos.csproj": {}
   },
   "projects": {
-    "E:\\Crud\\Datos\\Datos.csproj": {
+    "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Datos\\Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Crud\\Datos\\Datos.csproj",
+        "projectUniqueName": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Datos\\Datos.csproj",
         "projectName": "Datos",
-        "projectPath": "E:\\Crud\\Datos\\Datos.csproj",
+        "projectPath": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Datos\\Datos.csproj",
         "packagesPath": "C:\\Users\\GamerGroup\\.nuget\\packages\\",
-        "outputPath": "E:\\Crud\\Datos\\obj\\",
+        "outputPath": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Datos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GamerGroup\\AppData\\Roaming\\NuGet\\NuGet.Config",

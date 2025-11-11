@@ -6496,11 +6496,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Crud\\Crud\\Crud.csproj",
+      "projectUniqueName": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Crud.csproj",
       "projectName": "Crud",
-      "projectPath": "E:\\Crud\\Crud\\Crud.csproj",
+      "projectPath": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Crud.csproj",
       "packagesPath": "C:\\Users\\GamerGroup\\.nuget\\packages\\",
-      "outputPath": "E:\\Crud\\Crud\\obj\\",
+      "outputPath": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\GamerGroup\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6517,8 +6517,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\Crud\\Datos\\Datos.csproj": {
-              "projectPath": "E:\\Crud\\Datos\\Datos.csproj"
+            "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Datos\\Datos.csproj": {
+              "projectPath": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Datos\\Datos.csproj"
             }
           }
         }
