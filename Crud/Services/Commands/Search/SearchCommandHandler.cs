@@ -1,23 +1,24 @@
 ﻿using Crud.Services.Models;
 using Datos;
+using Datos.Repos;
 
 namespace Crud.Services.Commands.Search
 {
     public class SearchCommandHandler
     {
-        private EfContext _ctx;
+        private IClienteRepo _clienteRepo;
         private SearchCommandResponse _response;
 
-        public SearchCommandHandler(EfContext ctx)
+        public SearchCommandHandler(IClienteRepo clienteRepo)
         {
-            _ctx = ctx;
+            _clienteRepo = clienteRepo;
             _response = new SearchCommandResponse();
 
         }
 
         public SearchCommandResponse Handler(SearchCommandRequest request)
         {
-            var clientes = _ctx.ClienteRepo.Search(request.Nombre);
+            var clientes = _clienteRepo.Search(request.Nombre);
             if(clientes != null)
             {
                 var clientesModel = new List<ClienteModel>();
@@ -25,6 +26,7 @@ namespace Crud.Services.Commands.Search
                 {
                     var model = new ClienteModel
                     {
+                        Id = cliente.Id,
                         Nombre = cliente.Nombre,
                         Apellido = cliente.Apellido,
                         FechaDeNacimiento = cliente.FechaDeNacimiento,

@@ -1,26 +1,28 @@
 ﻿using Crud.Services.Commands.Search;
 using Crud.Services.Models;
 using Datos;
+using Datos.Repos;
 
 namespace Crud.Services.Commands.Get
 {
     public class GetCommandHandler
     {
-        private EfContext _ctx;
         private GetCommandResponse _response;
+        private IClienteRepo _clienteRepo;
 
-        public GetCommandHandler(EfContext ctx)
+        public GetCommandHandler(IClienteRepo clienteRepo)
         {
-            _ctx = ctx;
             _response = new GetCommandResponse();
+            _clienteRepo = clienteRepo;
         }
 
         public GetCommandResponse Handler(GetCommandRequest request)
         {
-            var cliente = _ctx.ClienteRepo.Get(request.Id);
+            var cliente = _clienteRepo.Get(request.Id);
             
                 var model = new ClienteModel
                 {
+                    Id = request.Id,
                     Nombre = cliente.Nombre,
                     Apellido = cliente.Apellido,
                     FechaDeNacimiento = cliente.FechaDeNacimiento,

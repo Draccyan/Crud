@@ -1,17 +1,18 @@
 ﻿using Crud.Services.Models;
 using Datos;
 using Datos.Entidades;
+using Datos.Repos;
 
 namespace Crud.Services.Commands.Upsert
 {
     public class UpsertCommandHandler
     {
-        private EfContext _ctx;
+        private IClienteRepo _clienteRepo;
         private UpsertCommandResponse _response;
 
-        public UpsertCommandHandler(EfContext ctx)
+        public UpsertCommandHandler(IClienteRepo clienteRepo)
         {
-            _ctx = ctx;
+            _clienteRepo = clienteRepo;
             _response = new UpsertCommandResponse();
 
         }
@@ -56,12 +57,12 @@ namespace Crud.Services.Commands.Upsert
                         Domicilio = request.Data.Domicilio
                     };
 
-                    _ctx.ClienteRepo.Insert(model);
+                    _clienteRepo.Insert(model);
                     insertOk = true;
                 }
                 else
                 {
-                    var cliente = _ctx.ClienteRepo.Get(request.Id);
+                    var cliente = _clienteRepo.Get(request.Id);
                     if (cliente == null)
                         throw new InvalidOperationException("No se encontró el cliente para actualizar.");
 
@@ -73,10 +74,10 @@ namespace Crud.Services.Commands.Upsert
                     cliente.Celular = request.Data.Celular;
                     cliente.Email = request.Data.Email;
 
-                    _ctx.ClienteRepo.Update(cliente);
+                    _clienteRepo.Update(cliente);
                 }
 
-                _ctx.SaveChanges();
+                _clienteRepo.SaveChanges();
 
                 _response.Result = insertOk
                     ? "Registro insertado con éxito"

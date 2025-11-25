@@ -1,22 +1,23 @@
 ﻿using Crud.Services.Commands.GetAll;
 using Crud.Services.Models;
 using Datos;
+using Datos.Repos;
 
 namespace Crud.Services.Commands.GetAll
 {
     public class GetAllCommandHandler
     {
-        private EfContext _ctx;
+        private IClienteRepo _clienteRepo;
         private GetAllCommandResponse _response;
-        public GetAllCommandHandler(EfContext ctx)
+        public GetAllCommandHandler(IClienteRepo clienteRepo)
         {
-            _ctx = ctx;
+            _clienteRepo = clienteRepo;
             _response = new GetAllCommandResponse();
         }
 
         public GetAllCommandResponse Handler(GetAllCommandRequest request)
         {
-            var clientes = _ctx.ClienteRepo.GetAll();
+            var clientes = _clienteRepo.GetAll();
             if (clientes != null)
             {
                 var clientesModel = new List<ClienteModel>();
@@ -24,6 +25,7 @@ namespace Crud.Services.Commands.GetAll
                 {
                     var model = new ClienteModel
                     {
+                        Id = cliente.Id,
                         Nombre = cliente.Nombre,
                         Apellido = cliente.Apellido,
                         FechaDeNacimiento = cliente.FechaDeNacimiento,

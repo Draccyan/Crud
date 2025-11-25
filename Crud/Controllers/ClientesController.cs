@@ -4,6 +4,7 @@ using Crud.Services.Commands.GetAll;
 using Crud.Services.Commands.Search;
 using Crud.Services.Commands.Upsert;
 using Datos;
+using Datos.Repos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Crud.Controllers
@@ -12,18 +13,18 @@ namespace Crud.Controllers
     [Route("Crud")]
     public class ClientesController : ControllerBase
     {
-        private readonly EfContext _ctx;
+        private readonly IClienteRepo _clienteRepo;
 
-        public ClientesController(EfContext ctx)
+        public ClientesController(IClienteRepo clienteRepo)
         {
-            _ctx = ctx;
+            _clienteRepo = clienteRepo;
         }
 
         [HttpGet]
         [Route("getAll")]
         public GetAllCommandResponse GetAll([FromQuery] GetAllCommandRequest command)
         {
-            var commandHandler = new GetAllCommandHandler(_ctx);
+            var commandHandler = new GetAllCommandHandler(_clienteRepo);
             var response = commandHandler.Handler(command);
             //
             return response;
@@ -33,7 +34,7 @@ namespace Crud.Controllers
         [Route("get")]
         public GetCommandResponse Get([FromQuery] GetCommandRequest command)
         {
-            var commandHandler = new GetCommandHandler(_ctx);
+            var commandHandler = new GetCommandHandler(_clienteRepo);
             var response = commandHandler.Handler(command);
             //
             return response;
@@ -43,7 +44,7 @@ namespace Crud.Controllers
         [Route("search")]
         public SearchCommandResponse Search([FromQuery] SearchCommandRequest command)
         {
-            var commandHandler = new SearchCommandHandler(_ctx);
+            var commandHandler = new SearchCommandHandler(_clienteRepo);
             var response = commandHandler.Handler(command);
             //
             return response;
@@ -53,17 +54,26 @@ namespace Crud.Controllers
         [Route("upsert")]
         public UpsertCommandResponse Upsert([FromBody] UpsertCommandRequest command)
         {
-            var commandHandler = new UpsertCommandHandler(_ctx);
+            var commandHandler = new UpsertCommandHandler(_clienteRepo);
             var response = commandHandler.Handler(command);
             //
             return response;
         }
 
+        //[HttpPost]
+        //[Route("upsert")]
+        //public UpsertCommandResponse Upsert([FromBody] UpsertCommandRequest command)
+        //{
+        //    // 1. Elimina temporalmente la llamada al commandHandler
+        //    // 2. Solo retorna una respuesta válida
+        //    return new UpsertCommandResponse { Result = "Test OK" };
+        //}
+
         [HttpPost]
         [Route("delete")]
         public DeleteCommandResponse Delete([FromBody] DeleteCommandRequest command)
         {
-            var commandHandler = new DeleteCommandHandler(_ctx);
+            var commandHandler = new DeleteCommandHandler(_clienteRepo);
             var response = commandHandler.Handler(command);
             //
             return response;

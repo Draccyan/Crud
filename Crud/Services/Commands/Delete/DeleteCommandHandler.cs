@@ -2,17 +2,18 @@
 using Crud.Services.Models;
 using Datos;
 using Datos.Entidades;
+using Datos.Repos;
 
 namespace Crud.Services.Commands.Upsert
 {
     public class DeleteCommandHandler
     {
-        private EfContext _ctx;
+        private IClienteRepo _clienteRepo;
         private DeleteCommandResponse _response;
 
-        public DeleteCommandHandler(EfContext ctx)
+        public DeleteCommandHandler(IClienteRepo clienteRepo)
         {
-            _ctx = ctx;
+            _clienteRepo = clienteRepo;
             _response = new DeleteCommandResponse();
 
         }
@@ -20,13 +21,13 @@ namespace Crud.Services.Commands.Upsert
         public DeleteCommandResponse Handler(DeleteCommandRequest request)
         {
 
-            var cliente = _ctx.ClienteRepo.Get(request.Id);
+            var cliente = _clienteRepo.Get(request.Id);
             if(cliente!= null)
             {
-                _ctx.ClienteRepo.Delete(cliente);
+                _clienteRepo.Delete(cliente);
             }
 
-            _ctx.SaveChanges();
+            _clienteRepo.SaveChanges();
 
             _response.Result = "Registro eliminado con exito";
 

@@ -11,7 +11,8 @@ namespace Datos.Repos
         void Insert(Clientes cliente);
         void Update(Clientes cliente);
         void Delete(Clientes cliente);
-        
+        void SaveChanges();
+
     }
     public class ClienteRepo : IClienteRepo
     {
@@ -65,6 +66,11 @@ namespace Datos.Repos
                 throw new InvalidOperationException("No encontre ningun cliente");
             }
             return clientes;
+        }
+
+        public void SaveChanges()
+        {
+            _ctx.SaveChanges();
         }
     }
 }

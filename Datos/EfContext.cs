@@ -31,7 +31,7 @@ namespace Datos
         #endregion
 
         #region Repos
-        public IClienteRepo ClienteRepo => new ClienteRepo(this);
+        ////public IClienteRepo ClienteRepo => new ClienteRepo(this);
         #endregion
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -3,25 +3,21 @@
   "WorkspaceRootPath": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|d:\\zair\\programacion\\miscodigos\\crud\\crud\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|solutionrelative:controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A57FEF6F-8698-43C1-A1DF-BF10C6ED61F7}|..\\Front\\Front.csproj|d:\\zair\\programacion\\miscodigos\\crud\\front\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A57FEF6F-8698-43C1-A1DF-BF10C6ED61F7}|..\\Front\\Front.csproj|d:\\zair\\programacion\\miscodigos\\crud\\front\\views\\cliente\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A57FEF6F-8698-43C1-A1DF-BF10C6ED61F7}|..\\Front\\Front.csproj|d:\\zair\\programacion\\miscodigos\\crud\\front\\models\\clientevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A57FEF6F-8698-43C1-A1DF-BF10C6ED61F7}|..\\Front\\Front.csproj|d:\\zair\\programacion\\miscodigos\\crud\\front\\views\\cliente\\upsert.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|d:\\zair\\programacion\\miscodigos\\crud\\crud\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|solutionrelative:controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|d:\\zair\\programacion\\miscodigos\\crud\\crud\\services\\commands\\upsert\\upsertcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|solutionrelative:services\\commands\\upsert\\upsertcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|d:\\zair\\programacion\\miscodigos\\crud\\crud\\services\\commands\\delete\\deletecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|solutionrelative:services\\commands\\delete\\deletecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|d:\\zair\\programacion\\miscodigos\\crud\\crud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDE9B99-6058-45A6-BC77-B7D8632C40EE}|Crud.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,17 +27,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ClientesController.cs",
               "DocumentMoniker": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Controllers\\ClientesController.cs",
               "RelativeDocumentMoniker": "Controllers\\ClientesController.cs",
               "ToolTip": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Controllers\\ClientesController.cs",
               "RelativeToolTip": "Controllers\\ClientesController.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAIwBgAAAAIAAAA",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAswDkAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T23:10:49.251Z",
               "IsPinned": true,
@@ -53,67 +49,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Front\\Views\\Cliente\\Index.cshtml",
-              "RelativeDocumentMoniker": "..\\Front\\Views\\Cliente\\Index.cshtml",
-              "ToolTip": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Front\\Views\\Cliente\\Index.cshtml",
-              "RelativeToolTip": "..\\Front\\Views\\Cliente\\Index.cshtml",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAWwBIAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-11T19:31:45.544Z",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAcwBYAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T14:19:43.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ClienteController.cs",
               "DocumentMoniker": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Front\\Controllers\\ClienteController.cs",
               "RelativeDocumentMoniker": "..\\Front\\Controllers\\ClienteController.cs",
               "ToolTip": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Front\\Controllers\\ClienteController.cs",
               "RelativeToolTip": "..\\Front\\Controllers\\ClienteController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAIwBkAAAAQAAAA",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAcwF8AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-11T19:14:29.81Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Upsert.cshtml",
+              "DocumentMoniker": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Front\\Views\\Cliente\\Upsert.cshtml",
+              "RelativeDocumentMoniker": "..\\Front\\Views\\Cliente\\Upsert.cshtml",
+              "ToolTip": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Front\\Views\\Cliente\\Upsert.cshtml",
+              "RelativeToolTip": "..\\Front\\Views\\Cliente\\Upsert.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAABMAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T01:03:41.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ClienteVM.cs",
-              "DocumentMoniker": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Front\\Models\\ClienteVM.cs",
-              "RelativeDocumentMoniker": "..\\Front\\Models\\ClienteVM.cs",
-              "ToolTip": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Front\\Models\\ClienteVM.cs",
-              "RelativeToolTip": "..\\Front\\Models\\ClienteVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T18:00:48.551Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UpsertCommandHandler.cs",
-              "DocumentMoniker": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Services\\Commands\\Upsert\\UpsertCommandHandler.cs",
-              "RelativeDocumentMoniker": "Services\\Commands\\Upsert\\UpsertCommandHandler.cs",
-              "ToolTip": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Services\\Commands\\Upsert\\UpsertCommandHandler.cs",
-              "RelativeToolTip": "Services\\Commands\\Upsert\\UpsertCommandHandler.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAswFAAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T10:38:48.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DeleteCommandHandler.cs",
-              "DocumentMoniker": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Services\\Commands\\Delete\\DeleteCommandHandler.cs",
-              "RelativeDocumentMoniker": "Services\\Commands\\Delete\\DeleteCommandHandler.cs",
-              "ToolTip": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Crud\\Services\\Commands\\Delete\\DeleteCommandHandler.cs",
-              "RelativeToolTip": "Services\\Commands\\Delete\\DeleteCommandHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBJwBoAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T13:32:13.109Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Front\\Views\\Cliente\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\Front\\Views\\Cliente\\Index.cshtml",
+              "ToolTip": "D:\\Zair\\Programacion\\MisCodigos\\Crud\\Front\\Views\\Cliente\\Index.cshtml",
+              "RelativeToolTip": "..\\Front\\Views\\Cliente\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAABuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T19:31:45.544Z",
               "EditorCaption": ""
             }
           ]
