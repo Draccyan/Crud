@@ -1,4 +1,5 @@
-﻿using Crud.Services.Commands.Get;
+﻿using Crud.Services.Commands.Delete;
+using Crud.Services.Commands.Get;
 using Crud.Services.Commands.GetAll;
 using Crud.Services.Commands.Upsert;
 using Crud.Services.Models;
@@ -46,7 +47,6 @@ namespace Front.Controllers
             return View(new List<ClienteVM>());
             
         }
-
 
         public async Task<IActionResult> Upsert(int id = 0)
         {
@@ -108,9 +108,36 @@ namespace Front.Controllers
             return View(cliente);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            if (!ModelState.IsValid)
+                return View(id);
+
+            var requestObj = new DeleteCommandRequest
+            {
+                Id = id
+            };
+
+            var json = JsonConvert.SerializeObject(requestObj);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await _httpClient.PostAsync("Crud/delete", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var respContent = await response.Content.ReadAsStringAsync();
+                var result = JsonConvert.DeserializeObject<DeleteCommandResponse>(respContent);
+
+                TempData["Mensaje"] = result.Result;
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Error al eliminar el cliente.");
+            return View(id);
+        }
 
 
-        
         private ClienteModel ToClienteModel(ClienteVM vm)
         {
             if (vm == null) return null;

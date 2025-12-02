@@ -60,15 +60,6 @@ namespace Crud.Controllers
             return response;
         }
 
-        //[HttpPost]
-        //[Route("upsert")]
-        //public UpsertCommandResponse Upsert([FromBody] UpsertCommandRequest command)
-        //{
-        //    // 1. Elimina temporalmente la llamada al commandHandler
-        //    // 2. Solo retorna una respuesta válida
-        //    return new UpsertCommandResponse { Result = "Test OK" };
-        //}
-
         [HttpPost]
         [Route("delete")]
         public DeleteCommandResponse Delete([FromBody] DeleteCommandRequest command)
