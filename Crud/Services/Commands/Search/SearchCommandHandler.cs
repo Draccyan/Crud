@@ -7,42 +7,36 @@ namespace Crud.Services.Commands.Search
     public class SearchCommandHandler
     {
         private IClienteRepo _clienteRepo;
-        private SearchCommandResponse _response;
 
         public SearchCommandHandler(IClienteRepo clienteRepo)
         {
             _clienteRepo = clienteRepo;
-            _response = new SearchCommandResponse();
-
         }
 
-        public SearchCommandResponse Handler(SearchCommandRequest request)
+        public BaseResponse<List<ClienteModel>> Handler(SearchCommandRequest request)
         {
+            // Buscamos en el repositorio por nombre
             var clientes = _clienteRepo.Search(request.Nombre);
-            if(clientes != null)
+
+            // Si clientes es null, devolvemos una lista vacía para no romper nada
+            var data = clientes?.Select(c => new ClienteModel
             {
-                var clientesModel = new List<ClienteModel>();
-                foreach (var cliente in clientes)
-                {
-                    var model = new ClienteModel
-                    {
-                        Id = cliente.Id,
-                        Nombre = cliente.Nombre,
-                        Apellido = cliente.Apellido,
-                        FechaDeNacimiento = cliente.FechaDeNacimiento,
-                        Celular = cliente.Celular,
-                        Email = cliente.Email,
-                        Cuit = cliente.Cuit,
-                        Domicilio = cliente.Domicilio
-                    };
+                Id = c.Id,
+                Nombre = c.Nombre,
+                Apellido = c.Apellido,
+                FechaDeNacimiento = c.FechaDeNacimiento,
+                Celular = c.Celular,
+                Email = c.Email,
+                Cuit = c.Cuit,
+                Domicilio = c.Domicilio
+            }).ToList() ?? new List<ClienteModel>();
 
-                    clientesModel.Add(model);
-                }
-
-                _response.Clientes = clientesModel;
-            }
-            
-            return _response;
+            return new BaseResponse<List<ClienteModel>>
+            {
+                Success = true,
+                Message = $"Se encontraron {data.Count} clientes",
+                Data = data
+            };
         }
     }
 }

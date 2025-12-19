@@ -5,43 +5,37 @@ using Datos.Repos;
 
 namespace Crud.Services.Commands.GetAll
 {
-    public class GetAllCommandHandler
+    public class GetAllCommandHandler 
     {
-        private IClienteRepo _clienteRepo;
-        private GetAllCommandResponse _response;
+        private readonly IClienteRepo _clienteRepo;
+
         public GetAllCommandHandler(IClienteRepo clienteRepo)
         {
             _clienteRepo = clienteRepo;
-            _response = new GetAllCommandResponse();
         }
 
-        public GetAllCommandResponse Handler(GetAllCommandRequest request)
+        public BaseResponse<List<ClienteModel>> Handler(GetAllCommandRequest request)
         {
             var clientes = _clienteRepo.GetAll();
-            if (clientes != null)
+
+            var listaMapeada = clientes?.Select(c => new ClienteModel
             {
-                var clientesModel = new List<ClienteModel>();
-                foreach (var cliente in clientes)
-                {
-                    var model = new ClienteModel
-                    {
-                        Id = cliente.Id,
-                        Nombre = cliente.Nombre,
-                        Apellido = cliente.Apellido,
-                        FechaDeNacimiento = cliente.FechaDeNacimiento,
-                        Celular = cliente.Celular,
-                        Email = cliente.Email,
-                        Cuit = cliente.Cuit,
-                        Domicilio = cliente.Domicilio
-                    };
+                Id = c.Id,
+                Nombre = c.Nombre,
+                Apellido = c.Apellido,
+                FechaDeNacimiento = c.FechaDeNacimiento,
+                Cuit = c.Cuit,
+                Domicilio = c.Domicilio,
+                Celular = c.Celular,
+                Email = c.Email
+            }).ToList() ?? new List<ClienteModel>();
 
-                    clientesModel.Add(model);
-                }
-
-                _response.Clientes = clientesModel;
-            }
-
-            return _response;
+            return new BaseResponse<List<ClienteModel>>
+            {
+                Success = true,
+                Message = "Clientes listados con éxito",
+                Data = listaMapeada
+            };
         }
     }
 }

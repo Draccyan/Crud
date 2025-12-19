@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Datos", "..\Datos\Datos.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Front", "..\Front\Front.csproj", "{A57FEF6F-8698-43C1-A1DF-BF10C6ED61F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crud.Tests", "..\Crud.Tests\Crud.Tests.csproj", "{856CB640-E3F2-4A9A-83A8-A09065825C4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A57FEF6F-8698-43C1-A1DF-BF10C6ED61F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A57FEF6F-8698-43C1-A1DF-BF10C6ED61F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A57FEF6F-8698-43C1-A1DF-BF10C6ED61F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{856CB640-E3F2-4A9A-83A8-A09065825C4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{856CB640-E3F2-4A9A-83A8-A09065825C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{856CB640-E3F2-4A9A-83A8-A09065825C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{856CB640-E3F2-4A9A-83A8-A09065825C4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

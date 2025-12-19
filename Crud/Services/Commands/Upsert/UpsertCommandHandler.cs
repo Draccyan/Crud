@@ -8,43 +8,40 @@ namespace Crud.Services.Commands.Upsert
     public class UpsertCommandHandler
     {
         private IClienteRepo _clienteRepo;
-        private UpsertCommandResponse _response;
 
         public UpsertCommandHandler(IClienteRepo clienteRepo)
         {
             _clienteRepo = clienteRepo;
-            _response = new UpsertCommandResponse();
-
         }
 
-        public UpsertCommandResponse Handler(UpsertCommandRequest request)
+        public BaseResponse<string> Handler(UpsertCommandRequest request)
         {
             try
             {
                 if (request.Data == null)
-                    throw new InvalidOperationException("No recibi un cliente");
+                    return new BaseResponse<string> { Success = false, Message = "No se recibieron datos del cliente." };
 
                 if (string.IsNullOrWhiteSpace(request.Data.Nombre))
-                    throw new InvalidOperationException("El campo Nombre es requerido");
+                    return new BaseResponse<string> { Success = false, Message = "El campo Nombre es requerido." };
 
                 if (string.IsNullOrWhiteSpace(request.Data.Apellido))
-                    throw new InvalidOperationException("El campo Apellido es requerido");
+                    return new BaseResponse<string> { Success = false, Message = "El campo Apellido es requerido." };
 
                 if (string.IsNullOrWhiteSpace(request.Data.Celular))
-                    throw new InvalidOperationException("El campo Celular es requerido");
+                    return new BaseResponse<string> { Success = false, Message = "El campo Celular es requerido." };
 
                 if (request.Data.FechaDeNacimiento == null)
-                    throw new InvalidOperationException("El campo Fecha de nacimiento es requerido");
+                    return new BaseResponse<string> { Success = false, Message = "El campo Fecha de nacimiento es requerido." };
 
                 if (string.IsNullOrWhiteSpace(request.Data.Cuit) || request.Data.Cuit.Length != 11)
-                    throw new InvalidOperationException("El campo Cuit no tiene el formato correcto");
+                    return new BaseResponse<string> { Success = false, Message = "El campo Cuit no tiene el formato correcto (debe tener 11 dígitos)." };
 
                 if (!string.IsNullOrWhiteSpace(request.Data.Email) && !request.Data.Email.Contains("@"))
-                    throw new InvalidOperationException("El campo Email no tiene el formato correcto");
+                    return new BaseResponse<string> { Success = false, Message = "El campo Email no tiene el formato correcto." };
 
-                bool insertOk = false;
+                bool isInsert = request.Id == 0;
 
-                if (request.Id == 0)
+                if (isInsert)
                 {
                     var model = new Clientes
                     {
@@ -56,15 +53,13 @@ namespace Crud.Services.Commands.Upsert
                         Cuit = request.Data.Cuit,
                         Domicilio = request.Data.Domicilio
                     };
-
                     _clienteRepo.Insert(model);
-                    insertOk = true;
                 }
                 else
                 {
                     var cliente = _clienteRepo.Get(request.Id);
                     if (cliente == null)
-                        throw new InvalidOperationException("No se encontró el cliente para actualizar.");
+                        return new BaseResponse<string> { Success = false, Message = "No se encontró el cliente para actualizar." };
 
                     cliente.Nombre = request.Data.Nombre;
                     cliente.Apellido = request.Data.Apellido;
@@ -79,23 +74,21 @@ namespace Crud.Services.Commands.Upsert
 
                 _clienteRepo.SaveChanges();
 
-                _response.Result = insertOk
-                    ? "Registro insertado con éxito"
-                    : "Registro actualizado con éxito";
-            }
-            catch (InvalidOperationException ex)
-            {
-                // Captura errores de validación y los devuelve en el resultado
-                _response.Result = $"Error: {ex.Message}";
+                return new BaseResponse<string>
+                {
+                    Success = true,
+                    Message = isInsert ? "Registro insertado con éxito" : "Registro actualizado con éxito",
+                    Data = isInsert ? "INSERT_OK" : "UPDATE_OK"
+                };
             }
             catch (Exception ex)
             {
-                // Captura cualquier otro error inesperado
-                _response.Result = $"Error inesperado: {ex.Message}";
+                return new BaseResponse<string>
+                {
+                    Success = false,
+                    Message = $"Error crítico: {ex.Message}"
+                };
             }
-
-            return _response;
         }
-
     }
 }

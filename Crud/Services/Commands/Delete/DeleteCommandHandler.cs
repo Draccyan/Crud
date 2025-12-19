@@ -9,29 +9,46 @@ namespace Crud.Services.Commands.Upsert
     public class DeleteCommandHandler
     {
         private IClienteRepo _clienteRepo;
-        private DeleteCommandResponse _response;
 
         public DeleteCommandHandler(IClienteRepo clienteRepo)
         {
             _clienteRepo = clienteRepo;
-            _response = new DeleteCommandResponse();
-
         }
 
-        public DeleteCommandResponse Handler(DeleteCommandRequest request)
+        public BaseResponse<string> Handler(DeleteCommandRequest request)
         {
-
-            var cliente = _clienteRepo.Get(request.Id);
-            if(cliente!= null)
+            try
             {
+                var cliente = _clienteRepo.Get(request.Id);
+
+                if (cliente == null)
+                {
+                    return new BaseResponse<string>
+                    {
+                        Success = false,
+                        Message = "No se encontró el cliente que intenta eliminar.",
+                        Data = null
+                    };
+                }
+
                 _clienteRepo.Delete(cliente);
+                _clienteRepo.SaveChanges();
+
+                return new BaseResponse<string>
+                {
+                    Success = true,
+                    Message = "Registro eliminado con éxito",
+                    Data = request.Id.ToString() // Devolvemos el ID eliminado como dato
+                };
             }
-
-            _clienteRepo.SaveChanges();
-
-            _response.Result = "Registro eliminado con exito";
-
-            return _response;
+            catch (Exception ex)
+            {
+                return new BaseResponse<string>
+                {
+                    Success = false,
+                    Message = $"Error al intentar eliminar: {ex.Message}"
+                };
+            }
         }
     }
 }
